@@ -1,0 +1,113 @@
+@font-face {
+	font-family:"roboto-light";
+	src:url("Roboto-Light.ttf");
+}
+
+@font-face{
+	font-family:"roboto-regular";
+	src:url("Roboto-Regular.ttf");
+}
+
+a{
+	text-decoration: none;
+	color:inherit;
+}
+
+body {
+	background-color: #E5E5E5;
+	padding:0;
+	margin:0;
+}
+
+header {
+	position:fixed;
+	left:0;
+	right:0;
+	top:0;
+	height:50px;
+	background-color:#8BC34A;
+}
+
+.user {
+	background-color:#689F38;
+	height:100%;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+nav{
+	font-family:"roboto-Light";
+	color:#FFF;
+	font-size:18px;
+	height:100%;
+}
+
+nav ul{
+	float:right;
+	margin-top:0px;
+	margin-bottom:0px;
+
+}
+
+nav ul li{
+	float:left;
+	margin-left:10px;
+	height:100%;
+	/*margin-top:calc(50% - 9px);*/
+}
+
+nav ul li span{
+  position: relative;
+  top:23%;
+}
+
+/* Body content */
+
+main{
+	max-width:1000px;
+	min-height:50px;
+	margin-top:80px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.ebook{
+	width:200px;
+	/*background-color:#AAA;*/
+	float:left;
+	margin-right:50px;
+	margin-bottom:20px;
+}
+
+.cover_container{
+	width:100%;
+	text-align:center;
+
+}
+
+button{
+	/*background-color:#BBB;*/
+	/*background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);*/
+	background-image: linear-gradient(to bottom, #82B1FF, #448AFF);
+	color:#FFF;
+	border:solid;
+	border-color:#DDD;
+	border-radius:15px;
+	border-width:1px; 
+	height:30px;
+	width:49%;
+	margin-top:10px;
+	font-family:"roboto-regular";
+	font-size:16px;
+}
+
+button:first-of-type{
+	border:none;
+	width:100%;
+	background-image: linear-gradient(to bottom, #448AFF, #2962FF);
+	margin-right:0%;
+	margin-left:0%;
+}

@@ -1,0 +1,8 @@
+hayden_pierce_personalizer_home_page:
+    path:     /
+    defaults: { _controller: HaydenPiercePersonalizerBundle:Default:index }
+
+hayden_pierce_personalizer_browse_page:
+    path:     /browse
+    defaults: { _controller: HaydenPiercePersonalizerBundle:Browse:index }
+

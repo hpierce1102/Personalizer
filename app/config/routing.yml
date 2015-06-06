@@ -1,3 +1,7 @@
+hayden_pierce_personalizer:
+    resource: "@HaydenPiercePersonalizerBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
