@@ -13,3 +13,7 @@ hayden_pierce_personalizer_sandbox:
 hayden_pierce_personalizer_OAuthCallback:
     path:     /OAuthCallback
     defaults: { _controller: HaydenPiercePersonalizerBundle:OAuthCallback:index }
+
+hayden_pierce_personalizer_Debug:
+    path:     /debug
+    defaults: { _controller: HaydenPiercePersonalizerBundle:Debug:index }
