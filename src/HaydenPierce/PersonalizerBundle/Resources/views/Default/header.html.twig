@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="styles/styles.css">
+		<!--jQuery and custom jQuery scripts-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!--<script src="js/jquery_scripts.js"/>-->
+
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<a href="/"><li><span>Home</span></li></a>
+					<a href="browse"><li><span>Browse</span></li></a>
+					{% if user %}
+						<a href="/logout"><li><span>Logout</span></li></a>
+						<li class="user"><span>{{ user.displayName }}</span></li><img src="{{ user.image_url }}"/>
+					{% else %}
+						<a href="/login"><li class="user"><span>Log In</span></li></a>
+					{% endif %}
+					
+				</ul>
+			</nav>
+		</header>
+
+		{% block body %}{% endblock %}
+
+	</body>
+</html>

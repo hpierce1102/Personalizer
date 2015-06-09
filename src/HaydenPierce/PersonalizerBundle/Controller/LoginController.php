@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpFoundation\Request;
 use HaydenPierce\PersonalizerBundle\Entity\userProfile;
 
-class SandboxController extends Controller
+class LoginController extends Controller
 {
     public function indexAction(Request $request)
     {
@@ -65,7 +65,7 @@ class SandboxController extends Controller
 			$session->set('displayName', $google_profile['displayName']);
 			$session->set('image_url', $google_profile['image']['url']);
 
-			return new Response(var_dump($session));
+			return $this->redirectToRoute('hayden_pierce_personalizer_browse_page');
 		} else {
 			//No access token found. Let's get one.
 			return $this->redirectToRoute('hayden_pierce_personalizer_OAuthCallback');

@@ -6,10 +6,6 @@ hayden_pierce_personalizer_browse_page:
     path:     /browse
     defaults: { _controller: HaydenPiercePersonalizerBundle:Browse:index }
 
-hayden_pierce_personalizer_sandbox:
-    path:     /sandbox
-    defaults: { _controller: HaydenPiercePersonalizerBundle:Sandbox:index }
-
 hayden_pierce_personalizer_OAuthCallback:
     path:     /OAuthCallback
     defaults: { _controller: HaydenPiercePersonalizerBundle:OAuthCallback:index }
@@ -17,3 +13,11 @@ hayden_pierce_personalizer_OAuthCallback:
 hayden_pierce_personalizer_Debug:
     path:     /debug
     defaults: { _controller: HaydenPiercePersonalizerBundle:Debug:index }
+
+hayden_pierce_personalizer_login:
+    path:     /login
+    defaults: { _controller: HaydenPiercePersonalizerBundle:Login:index }
+
+hayden_pierce_personalizer_logout:
+    path:     /logout
+    defaults: { _controller: HaydenPiercePersonalizerBundle:Logout:index }

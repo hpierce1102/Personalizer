@@ -1,28 +1,6 @@
-<html>
-	<head>
-		<link rel="stylesheet" href="styles/styles.css">
+{% extends 'HaydenPiercePersonalizerBundle:Default:header.html.twig' %}
 
-		<!--Google platform API-->
-		<script src="https://apis.google.com/js/platform.js" async defer></script>
-
-		<!--jQuery and custom jQuery scripts-->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<!--<script src="js/jquery_scripts.js"/>-->
-
-		<meta name="google-signin-client_id" content="620704725242-0rj65aj6ekca71rei23gdbvcc3qlvng2.apps.googleusercontent.com">
-
-	</head>
-	<body ng-controller="userController as user">
-		<header>
-			<nav>
-				<ul>
-					<a href="index.php"><li><span>Home</span></li></a>
-					<a href="browse.php"><li><span>Browse</span></li></a>
-					<a href="#"><li class="user"><span>Log In</span></li></a>
-				</ul>
-			</nav>
-		</header>	
-
+{% block body %}
 		<main>
 			<div class="ebook">
 				<div class="cover_container">
@@ -195,7 +173,4 @@
 				<button>Info</button>
 			</div>
 		</main>
-		
-		
-	</body>
-</html>
+{% endblock %}

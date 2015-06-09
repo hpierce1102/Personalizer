@@ -52,7 +52,7 @@ class OAuthCallbackController extends Controller
 		  $session->set('access_token', $access_token);
 		  $this->insert_user_record($google_profile, $access_token, $refresh_token);
 
-		  return $this->redirectToRoute('hayden_pierce_personalizer_sandbox');
+		  return $this->redirectToRoute('hayden_pierce_personalizer_login');
 		}
     }
 
