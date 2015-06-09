@@ -20,7 +20,8 @@ class DefaultController extends Controller
     	}
 
         return $this->render('HaydenPiercePersonalizerBundle:Default:index.html.twig', array(
-        	    'user' => $user
+        	    'user' => $user,
+                'HTTP_HOST' => $_SERVER['HTTP_HOST']
         	));
     }
 }

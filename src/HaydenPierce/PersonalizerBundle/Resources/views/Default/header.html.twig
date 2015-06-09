@@ -1,22 +1,33 @@
 <html>
 	<head>
-		<link rel="stylesheet" href="styles/styles.css">
+		
 		<!--jQuery and custom jQuery scripts-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<!--<script src="js/jquery_scripts.js"/>-->
 
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" href="http://{{ HTTP_HOST }}/styles/styles.css">
+		{% block extra_styles %}{% endblock %}
 	</head>
 	<body>
 		<header>
 			<nav>
 				<ul>
-					<a href="/"><li><span>Home</span></li></a>
-					<a href="browse"><li><span>Browse</span></li></a>
+					<a href="http://{{ HTTP_HOST }}"><li><span>Home</span></li></a>
+					<a href="http://{{ HTTP_HOST }}/browse"><li><span>Browse</span></li></a>
 					{% if user %}
-						<a href="/logout"><li><span>Logout</span></li></a>
+						<a href="http://{{ HTTP_HOST }}/logout"><li><span>Logout</span></li></a>
 						<li class="user"><span>{{ user.displayName }}</span></li><img src="{{ user.image_url }}"/>
 					{% else %}
-						<a href="/login"><li class="user"><span>Log In</span></li></a>
+						<a href="http://{{ HTTP_HOST }}/login"><li class="user"><span>Log In</span></li></a>
 					{% endif %}
 					
 				</ul>

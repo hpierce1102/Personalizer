@@ -6,6 +6,10 @@ hayden_pierce_personalizer_browse_page:
     path:     /browse
     defaults: { _controller: HaydenPiercePersonalizerBundle:Browse:index }
 
+hayden_pierce_personalizer_info_page:
+    path:     /ebook/{id}
+    defaults: { _controller: HaydenPiercePersonalizerBundle:Info:index }
+
 hayden_pierce_personalizer_OAuthCallback:
     path:     /OAuthCallback
     defaults: { _controller: HaydenPiercePersonalizerBundle:OAuthCallback:index }
@@ -21,3 +25,7 @@ hayden_pierce_personalizer_login:
 hayden_pierce_personalizer_logout:
     path:     /logout
     defaults: { _controller: HaydenPiercePersonalizerBundle:Logout:index }
+
+hayden_pierce_personalizer_ebook_setup:
+    path:     /ebook_setup
+    defaults: { _controller: HaydenPiercePersonalizerBundle:EBookSetup:index }

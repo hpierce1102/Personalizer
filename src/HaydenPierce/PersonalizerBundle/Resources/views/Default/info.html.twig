@@ -1,0 +1,23 @@
+{% extends 'HaydenPiercePersonalizerBundle:Default:header.html.twig' %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="http://{{ HTTP_HOST }}/styles/info.css">
+{% endblock %}
+
+{% block body %}
+	<main>
+		<div class="ebook">
+			<div class="cover_container">
+				<img class="cover_img" src="http://{{ HTTP_HOST }}/{{ eBook.coverImageUrl }}"/>
+			</div>
+
+			<a class="btn btn-default full_length" href="#">Download</a>
+			<a class="btn btn-default full_length" href="#">Wishlist</a>
+		</div>
+
+		<div class="info_text">
+			<h1>{{ eBook.title }}</h1>
+			<p>{{ eBook.description }}</p>
+		</div>
+	</main>
+{% endblock %}

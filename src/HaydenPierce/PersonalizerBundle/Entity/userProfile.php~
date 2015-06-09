@@ -17,7 +17,7 @@ class userProfile
 	protected $id;
 
 	/**
-	* @ORM\Column(type="integer", length= 50)
+	* @ORM\Column(type="string", length= 50)
 	*/
 	protected $googleId;
 
@@ -141,5 +141,28 @@ class userProfile
     public function getRefreshToken()
     {
         return $this->refreshToken;
+    }
+
+    /**
+     * Set accessToken
+     *
+     * @param string $accessToken
+     * @return userProfile
+     */
+    public function setAccessToken($accessToken)
+    {
+        $this->accessToken = $accessToken;
+
+        return $this;
+    }
+
+    /**
+     * Get accessToken
+     *
+     * @return string 
+     */
+    public function getAccessToken()
+    {
+        return $this->accessToken;
     }
 }

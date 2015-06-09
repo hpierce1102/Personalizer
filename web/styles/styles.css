@@ -85,14 +85,14 @@ main{
 
 }
 
-button{
+.btn{
 	/*background-color:#BBB;*/
 	/*background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
 	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
 	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
 	background-image: -o-linear-gradient(top, #3498db, #2980b9);*/
-	background-image: linear-gradient(to bottom, #82B1FF, #448AFF);
-	color:#FFF;
+	/*background-image: linear-gradient(to bottom, #82B1FF, #448AFF);*/
+	/*color:#FFF;*/
 	border:solid;
 	border-color:#DDD;
 	border-radius:15px;
@@ -100,14 +100,14 @@ button{
 	height:30px;
 	width:49%;
 	margin-top:10px;
-	font-family:"roboto-regular";
-	font-size:16px;
+	/*font-family:"roboto-regular";*/
+	/*font-size:16px;*/
 }
 
-button:first-of-type{
+.full_length{
 	border:none;
 	width:100%;
-	background-image: linear-gradient(to bottom, #448AFF, #2962FF);
+	/*background-image: linear-gradient(to bottom, #448AFF, #2962FF);*/
 	margin-right:0%;
 	margin-left:0%;
 }
