@@ -40,7 +40,7 @@ class OAuthCallbackController extends Controller
 
 		  if ($this->find_user($google_profile)) {
 		  	//returning user, we should have a refresh token already
-		  	$refresh_token = 'foo';
+		  	$refresh_token = null;
 
 		  } else {
 		  	//first time user, a refresh token will be provided.
