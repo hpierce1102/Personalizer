@@ -1,5 +1,5 @@
 <?php
-namespace HaydenPierce\PersonalizerBundle\Entity;
+namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 

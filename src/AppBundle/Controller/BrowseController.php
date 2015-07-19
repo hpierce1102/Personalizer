@@ -1,6 +1,6 @@
 <?php
 
-namespace HaydenPierce\PersonalizerBundle\Controller;
+namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -25,11 +25,11 @@ class BrowseController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $eBooks = $em
-                    ->getRepository('HaydenPierce\PersonalizerBundle\Entity\eBook')
+                    ->getRepository('AppBundle:eBook')
                     ->findAll();   
 
         //return new Response(var_dump($Ebooks)); 
-        return $this->render('HaydenPiercePersonalizerBundle:Default:browse.html.twig', array(
+        return $this->render('AppBundle:Default:browse.html.twig', array(
         	    'user' => $user,
                 'eBooks' => $eBooks,
                 'HTTP_HOST' => $_SERVER['HTTP_HOST']

@@ -2,7 +2,7 @@
 /**
 * gets info for a specific book. 
 */
-namespace HaydenPierce\PersonalizerBundle\Controller;
+namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use HaydenPierce\PersonalizerBundle\Entity\userProfile;
@@ -17,7 +17,7 @@ class InfoController extends Controller
 
     	//find the book by the id in the URL.
     	$eBook = $em
-    		->getRepository('HaydenPierce\PersonalizerBundle\Entity\eBook')
+    		->getRepository('AppBundle:eBook')
     		->find($id);
 
     	//get user info
@@ -30,7 +30,7 @@ class InfoController extends Controller
     	}
 
 		//return new Response(var_dump($user));
-        return $this->render('HaydenPiercePersonalizerBundle:Default:info.html.twig', array(
+        return $this->render('AppBundle:Default:info.html.twig', array(
 	        	'user' => $user,
 	        	'eBook' => $eBook,
 	        	'HTTP_HOST' => $_SERVER['HTTP_HOST']

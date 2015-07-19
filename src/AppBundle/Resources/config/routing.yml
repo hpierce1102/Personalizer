@@ -1,31 +1,41 @@
+##Config required by HWIObundle.
+#hwi_oauth_redirect:
+#    resource: "@HWIOAuthBundle/Resources/config/routing/redirect.xml"
+#    prefix:   /connect
+#
+#hwi_oauth_login:
+#    resource: "@HWIOAuthBundle/Resources/config/routing/login.xml"
+#    prefix:   /login
+
+#Our stuff.
 hayden_pierce_personalizer_home_page:
     path:     /
-    defaults: { _controller: HaydenPiercePersonalizerBundle:Default:index }
+    defaults: { _controller: AppBundle:Default:index }
 
 hayden_pierce_personalizer_browse_page:
     path:     /browse
-    defaults: { _controller: HaydenPiercePersonalizerBundle:Browse:index }
+    defaults: { _controller: AppBundle:Browse:index }
 
 hayden_pierce_personalizer_info_page:
     path:     /ebook/{id}
-    defaults: { _controller: HaydenPiercePersonalizerBundle:Info:index }
+    defaults: { _controller: AppBundle:Info:index }
 
 hayden_pierce_personalizer_OAuthCallback:
     path:     /OAuthCallback
-    defaults: { _controller: HaydenPiercePersonalizerBundle:OAuthCallback:index }
+    defaults: { _controller: AppBundle:OAuthCallback:index }
 
 hayden_pierce_personalizer_Debug:
     path:     /debug
-    defaults: { _controller: HaydenPiercePersonalizerBundle:Debug:index }
+    defaults: { _controller: AppBundle:Debug:index }
 
 hayden_pierce_personalizer_login:
     path:     /login
-    defaults: { _controller: HaydenPiercePersonalizerBundle:Login:index }
+    defaults: { _controller: AppBundle:Login:index }
 
 hayden_pierce_personalizer_logout:
     path:     /logout
-    defaults: { _controller: HaydenPiercePersonalizerBundle:Logout:index }
+    defaults: { _controller: AppBundle:Logout:index }
 
 hayden_pierce_personalizer_ebook_setup:
     path:     /ebook_setup
-    defaults: { _controller: HaydenPiercePersonalizerBundle:EBookSetup:index }
+    defaults: { _controller: AppBundle:EBookSetup:index }

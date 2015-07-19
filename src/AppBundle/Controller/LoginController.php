@@ -5,7 +5,7 @@
 *authorization.
 */
 
-namespace HaydenPierce\PersonalizerBundle\Controller;
+namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
@@ -57,7 +57,7 @@ class LoginController extends Controller
 			$google_profile = $plus_service->people->get('me');
 
 			$user_profile = $em
-				->getRepository('HaydenPierce\PersonalizerBundle\Entity\userProfile')
+				->getRepository('AppBundle:userProfile')
 				->findOneByGoogleId($google_profile['id']);
 
 			$session->set('id', $user_profile->getId());

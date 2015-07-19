@@ -1,6 +1,6 @@
 <?php
 
-namespace HaydenPierce\PersonalizerBundle\Controller;
+namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -19,7 +19,7 @@ class DefaultController extends Controller
     		$user =  null;
     	}
 
-        return $this->render('HaydenPiercePersonalizerBundle:Default:index.html.twig', array(
+        return $this->render('AppBundle:Default:index.html.twig', array(
         	    'user' => $user,
                 'HTTP_HOST' => $_SERVER['HTTP_HOST']
         	));

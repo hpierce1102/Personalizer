@@ -3,7 +3,7 @@
 *Handles getting authentication from google and stores info the the db.
 */
 
-namespace HaydenPierce\PersonalizerBundle\Controller;
+namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
@@ -61,7 +61,7 @@ class OAuthCallbackController extends Controller
     	$em = $this->getDoctrine()->getManager();
 
     	$user_profile = $em
-		->getRepository('HaydenPierce\PersonalizerBundle\Entity\userProfile')
+		->getRepository('AppBundle:userProfile')
 		->findOneByGoogleId($google_profile['id']);
 
 		if($user_profile){
@@ -76,7 +76,7 @@ class OAuthCallbackController extends Controller
     	$em = $this->getDoctrine()->getManager();
 
 		$user_profile = $em
-		->getRepository('HaydenPierce\PersonalizerBundle\Entity\userProfile')
+		->getRepository('AppBundle:userProfile')
 		->findOneByGoogleId($google_profile['id']);
 
 		if(!$user_profile){
