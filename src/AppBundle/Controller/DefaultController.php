@@ -1,17 +1,27 @@
 <?php
 
-namespace AppBundle\Controller;
+namespace HaydenPierce\PersonalizerBundle\Controller;
 
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
-    /**
-     * @Route("/app/example", name="homepage")
-     */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
-        return $this->render('default/index.html.twig');
+    	$session = $request->getSession();
+
+    	if($session->get('displayName')){
+    		$user = array();
+    		$user['displayName'] = $session->get('displayName');
+    		$user['image_url'] = $session->get('image_url');
+    	} else {
+    		$user =  null;
+    	}
+
+        return $this->render('HaydenPiercePersonalizerBundle:Default:index.html.twig', array(
+        	    'user' => $user,
+                'HTTP_HOST' => $_SERVER['HTTP_HOST']
+        	));
     }
 }
